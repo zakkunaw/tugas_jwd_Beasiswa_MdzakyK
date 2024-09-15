@@ -1,6 +1,10 @@
 # tugas_jwd_Beasiswa_MdzakyK
 Tugas JWD Pembuatan Software Beasiswa
-# Aplikasi Beasiswa
+# Tugas JWD Beasiswa MdzakyK
+
+Tugas JWD Pembuatan Software Beasiswa
+
+## Aplikasi Beasiswa
 
 Aplikasi web sederhana untuk pengelolaan pendaftaran dan verifikasi beasiswa, yang memungkinkan mahasiswa mendaftar, melihat status, dan melakukan operasi CRUD dasar. Aplikasi ini dibagi menjadi peran admin dan mahasiswa.
 
@@ -19,25 +23,24 @@ Pastikan Anda telah menginstal perangkat berikut di mesin Anda:
 Clone repository ke komputer lokal Anda atau unduh file ZIP dan ekstrak.
 
 ```bash
-git clone https://github.com/username-anda/beasiswa-app.git
-Atau, Anda bisa mengunduh file ZIP dari GitHub dan ekstrak ke lokasi yang diinginkan.
+git clone https://github.com/zakkunaw/tugas_jwd_Beasiswa_MdzakyK.git
 
 2. Pindahkan Repository ke htdocs
 Setelah di-clone atau di-download, pindahkan folder project ke direktori htdocs di XAMPP Anda:
 
-bash
-Salin kode
 # Pada Windows (asumsi XAMPP terinstal di C drive):
 C:/xampp/htdocs/
 
 # Pada macOS atau Linux:
 sudo mv /path-ke-repository /opt/lampp/htdocs/
+
+
 3. Import Database
 Anda perlu mengimport file beasiswa.sql ke database MySQL.
 
-Buka phpMyAdmin di browser.
+Buka phpMyAdmin di browser dengan mengunjungi http://localhost/phpmyadmin.
 Buat database baru dengan nama beasiswa.
-Klik database beasiswa lalu buka tab Import.
+Klik database beasiswa yang baru dibuat, lalu buka tab Import.
 Pilih file beasiswa.sql (yang sudah ada di repository) dan klik Go.
 Langkah ini akan membuat tabel-tabel dan data yang dibutuhkan aplikasi.
 
@@ -50,11 +53,8 @@ $host = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'beasiswa';
-Jika pengaturan MySQL Anda menggunakan kredensial yang berbeda, Anda bisa mengubahnya di beberapa file PHP terkait, seperti login.php, admin_dashboard.php, dan dashboard.php. Cari fungsi mysqli_connect() dan sesuaikan parameter sesuai pengaturan Anda:
+Jika pengaturan MySQL Anda menggunakan kredensial yang berbeda, Anda bisa mengubahnya di beberapa file PHP terkait, seperti login.php, admin_dashboard.php, dan dashboard.php. Cari fungsi mysqli_connect() dan sesuaikan parameter sesuai pengaturan Anda.
 
-php
-Salin kode
-$conn = mysqli_connect('localhost', 'root', '', 'beasiswa');
 5. Jalankan Aplikasi
 Jalankan layanan Apache dan MySQL di XAMPP.
 
