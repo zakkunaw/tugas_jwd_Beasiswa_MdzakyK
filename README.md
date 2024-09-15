@@ -1,5 +1,3 @@
-# tugas_jwd_Beasiswa_MdzakyK
-Tugas JWD Pembuatan Software Beasiswa
 # Tugas JWD Beasiswa MdzakyK
 
 Tugas JWD Pembuatan Software Beasiswa
@@ -25,9 +23,11 @@ Clone repository ke komputer lokal Anda atau unduh file ZIP dan ekstrak.
 ```bash
 git clone https://github.com/zakkunaw/tugas_jwd_Beasiswa_MdzakyK.git
 
-2. Pindahkan Repository ke htdocs
-Setelah di-clone atau di-download, pindahkan folder project ke direktori htdocs di XAMPP Anda:
+### 2. Pindahkan Repository ke `htdocs`
 
+Setelah di-clone atau di-download, pindahkan folder project ke direktori `htdocs` di XAMPP Anda:
+
+```bash
 # Pada Windows (asumsi XAMPP terinstal di C drive):
 C:/xampp/htdocs/
 
@@ -35,36 +35,34 @@ C:/xampp/htdocs/
 sudo mv /path-ke-repository /opt/lampp/htdocs/
 
 
-3. Import Database
-Anda perlu mengimport file beasiswa.sql ke database MySQL.
+### 3. Import Database
 
-Buka phpMyAdmin di browser dengan mengunjungi http://localhost/phpmyadmin.
-Buat database baru dengan nama beasiswa.
-Klik database beasiswa yang baru dibuat, lalu buka tab Import.
-Pilih file beasiswa.sql (yang sudah ada di repository) dan klik Go.
+Anda perlu mengimport file `beasiswa.sql` ke database MySQL:
+
+1. Buka phpMyAdmin di browser dengan mengunjungi [http://localhost/phpmyadmin](http://localhost/phpmyadmin).
+2. Buat database baru dengan nama `beasiswa`.
+3. Klik database `beasiswa` yang baru dibuat, lalu buka tab **Import**.
+4. Pilih file `beasiswa.sql` (yang sudah ada di repository) dan klik **Go**.
+
 Langkah ini akan membuat tabel-tabel dan data yang dibutuhkan aplikasi.
 
-4. Konfigurasi Koneksi Database (Opsional)
+
+### 4. Konfigurasi Koneksi Database (Opsional)
+
 Secara default, aplikasi ini menggunakan konfigurasi berikut untuk koneksi database:
 
-php
-Salin kode
+```php
 $host = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'beasiswa';
-Jika pengaturan MySQL Anda menggunakan kredensial yang berbeda, Anda bisa mengubahnya di beberapa file PHP terkait, seperti login.php, admin_dashboard.php, dan dashboard.php. Cari fungsi mysqli_connect() dan sesuaikan parameter sesuai pengaturan Anda.
 
-5. Jalankan Aplikasi
+
+### 5. Jalankan Aplikasi
+
 Jalankan layanan Apache dan MySQL di XAMPP.
 
-Buka XAMPP Control Panel, kemudian klik Start untuk Apache dan MySQL.
-Buka browser dan kunjungi http://localhost/beasiswa-app.
-Sekarang Anda dapat mencoba aplikasi dengan menggunakan kredensial login sebagai admin atau mendaftar sebagai peserta beasiswa.
+1. Buka XAMPP Control Panel, kemudian klik **Start** untuk Apache dan MySQL.
+2. Buka browser dan kunjungi `http://localhost/beasiswa-app`.
 
-Fitur Aplikasi
-Login sebagai Admin: Admin dapat masuk untuk memanage data pendaftar.
-Dashboard Mahasiswa: Mahasiswa dapat melihat status verifikasi beasiswa mereka setelah login.
-CRUD Admin: Admin dapat mengubah, menghapus, dan mengelola data pendaftar.
-Verifikasi Status: Admin dapat memverifikasi atau membatalkan verifikasi status pendaftar.
-Unduh Berkas Bukti: Admin dapat mengunduh berkas bukti yang diupload oleh pendaftar.
+Sekarang Anda dapat mencoba aplikasi dengan menggunakan kredensial login sebagai admin atau mendaftar sebagai peserta beasiswa.
